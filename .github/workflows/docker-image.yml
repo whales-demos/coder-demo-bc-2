@@ -20,10 +20,11 @@ jobs:
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
         with:
-          egistry: registry-1-stage.docker.io
+          registry: registry-1-stage.docker.io
           version: "lab:latest"
           driver: cloud
           endpoint: "philippecharriere937/philippecharriere937builder"
+          #endpoint: "weyland/weylandbuilder"
           #endpoint: "k33g/k33gbuilder"
       - name: Build and push
         uses: docker/build-push-action@v5
